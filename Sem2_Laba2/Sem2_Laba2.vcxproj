@@ -128,10 +128,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Binary_Tree.h" />
+    <ClInclude Include="Binary_Tree_TV.h" />
+    <ClInclude Include="TV.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Binary_Tree.cpp" />
+    <ClCompile Include="Binary_Tree_TV.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="TV.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
