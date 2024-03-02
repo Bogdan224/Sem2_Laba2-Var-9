@@ -4,6 +4,7 @@
 #include<locale.h>
 #include<time.h>
 
+//‘ункци€, выполн€юща€ 1-ое задание
 void Func1() {
 	Binary_Tree* head = NULL;
 	int size;
