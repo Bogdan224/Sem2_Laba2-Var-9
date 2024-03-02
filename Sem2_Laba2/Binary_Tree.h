@@ -18,5 +18,6 @@ void PrintVos(Binary_Tree* head);
 //Печатает элементы дерева по убыванию
 void PrintUb(Binary_Tree* head);
 //Возвращает кол-во элементов дерева
-int Size(Binary_Tree* head, int x = 0);
+int Size(Binary_Tree* head);
+void Delete_All(Binary_Tree** head);
 

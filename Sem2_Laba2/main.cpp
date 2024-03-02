@@ -4,17 +4,15 @@
 #include<locale.h>
 #include<time.h>
 
-int main() {
-	setlocale(LC_ALL, "RU");
-	srand(time(NULL));
+void Func1() {
 	Binary_Tree* head = NULL;
 	int size;
 	printf("Введите кол-во элементов в дереве: ");
 	scanf("%d", &size);
 	int x;
-	for (int i = 0; i < size; i++)
+	while (Size(head) < size)
 	{
-		x = rand() % 100+1;
+		x = rand() % 100 + 1;
 		Push(&head, x);
 	}
 	PrintVos(head);
@@ -22,5 +20,12 @@ int main() {
 	scanf("%d", &x);
 	Pop(&head, x);
 	PrintUb(head);
-	printf("\nSize: %d", Size(head));
+
+	Delete_All(&head);
+}
+
+int main() {
+	setlocale(LC_ALL, "RU");
+	srand(time(NULL));
+	Func1();
 }

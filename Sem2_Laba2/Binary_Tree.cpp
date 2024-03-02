@@ -77,10 +77,23 @@ void PrintUb(Binary_Tree* head) {
 	printf("%d ", head->value);
 	PrintUb(head->left);
 }
-int Size(Binary_Tree* head, int x) {
+int Size(Binary_Tree* head) {
 	if (head == NULL)
-		return x;
-	Size(head->right, x++);
-	x++;
-	Size(head->left, x++);
+		return 0;
+	int N_r = 0, N_l = 0;
+	if (head->left != NULL) {
+		N_l = Size(head->left);
+	}
+	if (head->right != NULL) {
+		N_r = Size(head->right);
+	}
+	return N_r + N_l + 1;
+}
+void Delete_All(Binary_Tree** head) {
+	if (*head == NULL)
+		return;
+	Delete_All(&(*head)->right);
+	Delete_All(&(*head)->left);
+	free(*head);
+	*head = NULL;
 }
